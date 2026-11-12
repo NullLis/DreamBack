@@ -1,25 +1,36 @@
-# DreamBack《仙冢》服务协议与隐私政策页面
+# DreamBack《仙冢》服务协议与隐私政策（穿山甲 + 虚幻引擎版本）
 
-此压缩包只新增以下两个文件，不会覆盖项目现有首页、CSS 或 JavaScript：
+## 已确认
 
-- `html/agreement.html`：服务协议
-- `html/privacy.html`：隐私政策
+- 游戏名称：DreamBack《仙冢》
+- 开发引擎：Unreal Engine（虚幻引擎）
+- 第三方广告 SDK：穿山甲广告 SDK（提供方：北京巨量引擎网络技术有限公司）
+- 现有网站样式与导航：继续依赖 `../css/style.css` 和 `../js/components.js`
+- 开发者与联系邮箱：按《拔钉子》现有公开材料暂沿用深圳市梦新技术工作室（个人独资）与 `316697487@qq.com`，上线前请确认
 
-两页使用现有 `../css/style.css` 与 `../js/components.js`，与 PullNail 的九章布局一致。现有页脚已链接到这两个路径，上传后无需调整页脚代码。
+## 文件放置位置
 
-## 上传路径
+将压缩包内以下文件上传到 `NullLis/DreamBack` 仓库的 `html/` 目录：
 
-把 ZIP 内 `html` 文件夹的两个 HTML 文件放到 GitHub 仓库 `NullLis/DreamBack` 的 `html/` 目录下。
+- `html/agreement.html`
+- `html/privacy.html`
 
-测试地址：
-- https://nulllis.github.io/DreamBack/html/agreement.html
-- https://nulllis.github.io/DreamBack/html/privacy.html
+无需修改现有的 `index.html`、`js/components.js` 或 `css/style.css`。现有页脚引用的两条相对链接会自动打开新增页面。
 
-## 发布前必须核验
+## 发布前必须核实
 
-1. **主体与联系邮箱**：沿用 PullNail 的主体 `深圳市梦新技术工作室（个人独资）` 与 `316697487@qq.com`，须确认《仙冢》实际由同一主体提供并使用该邮箱。
-2. **当前隐私政策范围**：公开仓库未提供客户端安装包及第三方 SDK 清单；隐私政策明确了已知网站处理情况，并提示必须在客户端正式上线前补足并核对实际数据行为。这是可发布的页面草稿，不是针对未知客户端的完整合规证明。
-3. **客户端数据处理**：核实游戏是否有账号、支付、广告、统计、登录 SDK、权限申请、联网、日志收集、云存档等，再补充具体服务商、信息类别、目的、保存期限、权限和同意机制。不要直接复制 PullNail 穿山甲披露，除非 DreamBack 确实接入。
-4. **法域和发行渠道**：不同地区、平台和商店可能存在额外合规要求，上线前应按目标市场进行法律审核。
+这些文件是基于已经确认的引擎和 SDK 事实制作的详细草案；**不是已经通过隐私合规审核的结论**。上线前应核实：
 
-内容编写日期：2026年11月13日。
+1. 当前 APK/AAB 实际集成的穿山甲 SDK **准确版本**、是否启用个性化广告、是否接入 Gromore 聚合或其他 SDK。
+2. 实际采集的信息类别、Android Manifest 权限、设备标识调用与运行时网络数据流；部分历史 SDK 版本可能涉及的字段不得误写为当前版必采。
+3. SDK 初始化和个人信息处理是否在履行必要告知、同意等程序之后进行；游戏内是否具备实际可用的退出、撤回等机制。
+4. 是否另行使用 Epic Online Services、Unreal Crash Reporter、Epic 账号或其他会处理玩家数据的在线服务；仅使用虚幻引擎不等于自动向 Epic 上传数据。
+5. 游戏是否真的提供本地存档、云同步、付费、账号、上传或其他特殊功能，并据此核实条款。
+
+官方参考：
+
+- 穿山甲广告 SDK 隐私政策： https://www.csjplatform.com/privacy/partner
+- 穿山甲广告 SDK 合规使用说明： https://www.csjplatform.com/terms/compliance-guide
+- GitHub 隐私声明： https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
+
+文档更新日期：2026-11-13。
