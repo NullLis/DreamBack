@@ -199,3 +199,43 @@ code {
 @media (prefers-reduced-motion: reduce) {
     *,*::before,*::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }
+
+
+/* ===== 更新日志表格：与 PullNail 官网一致 ===== */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--card-border);
+    -webkit-overflow-scrolling: touch;
+}
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--radius);
+}
+.table-wrapper th,
+.table-wrapper td {
+    padding: 1rem 1.2rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.table-wrapper th {
+    background: rgba(0,0,0,0.02);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.6px;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+.table-wrapper tr:last-child td { border-bottom: none; }
+.table-wrapper .log-content { white-space: pre-line; overflow-wrap: anywhere; }
+.table-wrapper .log-status { color: var(--text-muted); text-align: center; }
+@media (max-width: 640px) {
+    .table-wrapper th,
+    .table-wrapper td { padding: 0.8rem 0.65rem; font-size: 0.9rem; }
+}
