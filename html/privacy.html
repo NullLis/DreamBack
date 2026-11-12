@@ -1,164 +1,143 @@
 <!DOCTYPE html>
-
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="DreamBack《仙冢》隐私政策" name="description"/>
-<title>隐私政策 — DreamBack 仙冢</title>
-<link href="../css/style.css" rel="stylesheet"/>
-<style>
-/* 法律页面正文沿用 PullNail 结构，不覆盖网站全局配色、顶部导航或页脚 */
-.legal-content { max-width: 800px; margin: 0 auto; line-height: 1.85; overflow-wrap: break-word; }
-.legal-content h3 { margin: 1.65rem 0 .7rem; color: var(--accent-dark); font-size: 1.22rem; font-weight: 700; }
-.legal-content p { margin: 0 0 1.05rem; }
-.legal-content ul { padding-left: 1.55rem; margin: .6rem 0 1.1rem; }
-.legal-content li { margin-bottom: .52rem; }
-.legal-content a { color: var(--accent-dark); text-underline-offset: 3px; overflow-wrap: anywhere; }
-.legal-content a:hover { text-decoration: underline; }
-.legal-updated { color: var(--text-muted); font-size: .95rem; margin-bottom: 1.6rem !important; }
-.legal-intro { margin-bottom: 1.7rem; }
-.legal-directory { margin: 1.5rem 0 2.15rem; }
-.legal-directory h3 { margin-top: 0; }
-.legal-directory p { margin: 0 0 .44rem; line-height: 1.72; }
-.legal-chapter { margin-bottom: 2rem; }
-.legal-chapter h3 { margin-top: 0; margin-bottom: .84rem; }
-.legal-note { margin: 1rem 0; padding: .8rem 1rem; border-left: 3px solid var(--accent-dark); border-radius: 6px; background: rgba(255,255,255,.30); }
-.legal-signoff { margin-top: 2rem; padding-top: 1.15rem; border-top: 1px solid rgba(30,39,46,.14); }
-.legal-signoff p { margin-bottom: .35rem; }
-@media (max-width: 640px) { .legal-content h3 { font-size: 1.14rem; } }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="仙冢 DreamBack 隐私政策。">
+  <title>隐私政策 — DreamBack 仙冢</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+/* Legal page typography: inherits site colors, navbar, background and footer */
+.legal-content { max-width: 800px; margin: 0 auto; line-height: 1.88; overflow-wrap: break-word; }
+.legal-content h3 { font-size: 1.21rem; color: var(--accent-dark); margin: 1.9rem 0 .7rem; font-weight: 700; }
+.legal-content h4 { font-size: 1rem; margin: 1.15rem 0 .55rem; color: var(--text); }
+.legal-content p { margin: 0 0 .95rem; }
+.legal-content ul { padding-left: 1.5rem; margin: .5rem 0 1.25rem; }
+.legal-content li { margin-bottom: .38rem; }
+.legal-content a { color: var(--accent-dark); text-underline-offset: 3px; }
+.legal-meta { color: var(--text-muted); font-size: .93rem; margin-bottom: 1.4rem !important; }
+.legal-intro { margin-bottom: 1.55rem; }
+.legal-toc { margin: 1.25rem 0 2.2rem; }
+.legal-toc h3 { margin-top: 0; }
+.legal-toc ol { padding-left: 1.5rem; margin: .5rem 0; }
+.legal-toc li { margin-bottom: .25rem; }
+.legal-toc a { color: var(--text-muted); text-decoration: none; }
+.legal-toc a:hover { text-decoration: underline; color: var(--accent-dark); }
+.legal-section { margin-bottom: 1.8rem; scroll-margin-top: 92px; }
+.legal-section h3 { margin-top: 0; }
+.legal-subtle { color: var(--text-muted); }
+.legal-info { background: rgba(255,255,255,.45); border-left: 3px solid var(--accent-dark); padding: .95rem 1.15rem; border-radius: 7px; margin: .85rem 0 1.3rem; }
+.legal-info p:last-child { margin-bottom: 0; }
+.legal-sign { margin-top: 2.3rem; padding-top: 1.2rem; border-top: 1px solid rgba(30,39,46,.15); }
+.legal-sign p { margin-bottom: .18rem; }
+@media (max-width:640px) {
+ .legal-content h3 { font-size: 1.14rem; }
+ .legal-content { line-height: 1.82; }
+}
 </style>
 </head>
 <body>
-<div id="navbar-container"></div>
-<main class="container">
-<header>
-<h1>🔒 隐私政策</h1>
-<p class="subtitle">DreamBack《仙冢》尊重并重视您的隐私</p>
-</header>
-<section>
-<div class="legal-content">
-<p class="legal-updated"><strong>最后更新日期：2026年11月13日</strong></p>
-<div class="legal-intro">
-<h3>引言与适用范围</h3>
-<p>欢迎使用 DreamBack《仙冢》（以下简称“本游戏”）及相关网站。本游戏由<strong>深圳市梦新技术工作室（个人独资）</strong>（以下简称“我们”或“开发者”）开发和提供。本政策旨在说明游戏客户端、网站以及已集成第三方组件可能如何处理个人信息，并介绍您依法享有的权利。</p>
-<p>本游戏使用 <strong>Unreal Engine（虚幻引擎）</strong> 开发，并且<strong>已接入穿山甲广告 SDK</strong>。在实际启用广告服务时，穿山甲可能按其功能和配置处理设备、网络、广告交互及诊断相关信息。我们会依照适用法律履行告知、必要授权和最小化配置义务。</p>
-<p>使用虚幻引擎是游戏技术实现方式，<strong>不意味着游戏会仅因使用引擎就自动向 Epic Games 上传玩家个人信息</strong>。如实际游戏另行接入 Epic Online Services、Crash Reporter、分析服务等，我们应依据对应组件和实际数据流另行披露。</p>
-<p>本政策对已确认使用的技术作出明确披露。由于本网站仓库没有可独立核验的游戏安装包和完整运行时权限清单，实际涉及哪些可选信息、SDK 版本、广告类型、权限、网络请求及同意机制，仍须以发布版本的实际集成配置和测试结果逐项核实。<strong>本政策并不表示以下列举的全部可选字段均被实际收集。</strong></p>
-<p>本政策遵循合法、正当、必要和透明的原则。有关穿山甲广告 SDK 的独立处理规则，您也可以查阅其<a href="https://www.csjplatform.com/privacy/partner" rel="noopener noreferrer" target="_blank">官方隐私政策</a>。</p>
+  <div id="navbar-container"></div>
+  <main class="container">
+    <header>
+      <h1>🔒 隐私政策</h1>
+      <p class="subtitle">DreamBack《仙冢》个人信息保护说明</p>
+    </header>
+    <div class="legal-content">
+      <p class="legal-meta"><strong>更新日期：2026年11月13日</strong></p>
+      <div class="legal-intro">
+<p>DreamBack《仙冢》（以下简称“本游戏”）由<strong>深圳市梦新技术工作室（个人独资）</strong>（以下简称“我们”）提供。本政策适用于本游戏及其<a href="https://nulllis.github.io/DreamBack/">项目网站</a>，说明在提供相关服务时涉及的个人信息处理方式及您的权利。</p>
+<p>本游戏使用虚幻引擎（Unreal Engine）开发，<strong>并接入穿山甲广告 SDK</strong>。穿山甲作为第三方广告技术服务商，可能依据其服务功能处理设备及广告相关信息。我们遵循合法、正当、必要原则处理个人信息；依法需要取得同意的处理活动，将依法向您告知并获取相应同意。</p>
 </div>
-<div aria-label="隐私政策目录" class="legal-directory">
-<h3>目录</h3>
-<p>1. 我们可能收集的个人信息</p>
-<p>2. 我们如何使用您的个人信息</p>
-<p>3. 我们如何存储和保护您的个人信息</p>
-<p>4. 我们如何对外提供您的个人信息</p>
-<p>5. 我们如何使用 Cookies 及相关技术</p>
-<p>6. 我们如何保护未成年人的权益</p>
-<p>7. 您对个人信息享有的权利</p>
-<p>8. 本政策如何变更</p>
-<p>9. 如何联系我们</p>
-</div>
-<div class="legal-chapter" id="chapter-1"><h3>1. 我们可能收集的个人信息</h3>
-<p>根据您实际使用的游戏功能、设备环境以及已集成第三方服务的版本与配置，可能涉及以下个人信息：</p>
-<ul>
-<li><strong>本地游戏数据：</strong>游戏进度、设置和其他用于恢复运行状态的信息可能保存在设备本地；本地保存不代表自动上传给开发者。具体备份或同步方式以游戏实际功能为准。</li>
-<li><strong>网站访问与基础日志：</strong>当您访问 GitHub Pages 上的相关页面时，网站托管方可能处理 IP 地址、请求时间、访问路径、浏览器及设备类型等信息，以完成网页传输、保障服务安全和排查故障。</li>
-<li><strong>穿山甲广告 SDK 的设备基础信息：</strong>本游戏已集成穿山甲广告 SDK。根据穿山甲官方政策，SDK 在实际启用相关服务时可能处理设备品牌、型号、操作系统版本、屏幕密度和分辨率、设备语言与时区、CPU、可用存储空间、SIM 卡运营商代码等信息，以及 Android ID、OAID 等设备标识，用于广告展示、投放监测、归因及反作弊。</li>
-<li><strong>网络信息：</strong>广告服务可能处理 IP 地址、运营商信息、Wi-Fi 状态、网络信号强度等，用于网络连接、服务稳定性、广告投放和风险控制。</li>
-<li><strong>由版本和配置决定的可选信息：</strong>部分 SDK 版本或功能配置可能涉及 GAID、SSID、BSSID、应用安装或使用情况、设备传感器、粗略或精确位置等；某些历史版本还可能涉及 IMEI、IMSI、MEID、ICCID、设备 MAC 地址等标识。<strong>这些并非《仙冢》当前安装包必然采集的字段</strong>，实际是否处理须结合所用穿山甲版本、SDK 可选开关、设备权限与用户授权核验。</li>
-<li><strong>广告交互与诊断信息：</strong>如启用相应广告功能，穿山甲可能处理广告展示、浏览、点击、转化、应用包名、版本与前后台状态、崩溃或性能诊断等信息，用于效果统计、广告反作弊及服务稳定性。</li>
-<li><strong>主动提交的反馈：</strong>当您通过电子邮件、GitHub Issues 联系开发者时，我们可能收到您提供的邮箱、公开用户名、问题描述、截图、附件及沟通记录，用于处理问题。公开 Issue 的内容可能被其他访问者看到，请勿提交不必要的敏感信息。</li>
-</ul>
-<p>SDK 的实际采集范围会随版本、功能及操作系统变化。具体信息类别与可选范围请查阅<a href="https://www.csjplatform.com/privacy/partner" rel="noopener noreferrer" target="_blank">穿山甲广告 SDK 隐私政策</a>及其<a href="https://www.csjplatform.com/terms/compliance-guide" rel="noopener noreferrer" target="_blank">合规使用说明</a>。上述可能收集的信息范围并不代表用户已授权所有数据处理。</p>
-</div>
-<div class="legal-chapter" id="chapter-2"><h3>2. 我们如何使用您的个人信息</h3>
-<p>在适用法律允许的范围内，开发者及相关服务提供方可能基于相应服务目的处理必要信息：</p>
-<ul>
-<li>提供本游戏的运行、存档或版本支持等已实际启用的功能；</li>
-<li>通过穿山甲广告 SDK 实现广告加载与展示、监测归因、投放效果分析、反作弊及服务稳定性保障；</li>
-<li>如游戏实际启用个性化广告功能，在履行相应告知及同意或退出机制后，提供相关广告推荐；</li>
-<li>通过 GitHub Pages 提供项目网页，维持网络服务和基本安全；</li>
-<li>受理并回复您主动提交的问题反馈、支持请求或个人信息权利请求；</li>
-<li>履行适用的法律、监管和安全保障义务。</li>
-</ul>
-<p>本游戏通过虚幻引擎实现渲染、运行与游戏逻辑。<strong>虚幻引擎本身属于技术组件，不能据此认定游戏必然向 Epic Games 提交玩家标识或个人资料。</strong>如另外启用 Epic 提供的在线服务、遥测、崩溃上报或账号功能，我们应根据实际情况另行说明其处理的信息与用途。</p>
-<p>我们不会因为您仅查看介绍网页而要求主动提交身份证件或手机号码，也不会将您主动提交的反馈邮箱用于与处理反馈无关的营销。对于改变处理目的的情况，我们将依法履行相应程序。</p>
-</div>
-<div class="legal-chapter" id="chapter-3"><h3>3. 我们如何存储和保护您的个人信息</h3>
-<p><strong>本地游戏数据：</strong>游戏设置、进度等数据如在设备本地保存，其保存和删除方式取决于实际客户端、系统设置与可能启用的备份机制。清除应用数据或卸载游戏可能导致记录丢失。</p>
-<p><strong>广告 SDK 数据：</strong>穿山甲在提供广告服务时自行处理的信息，其处理规则、保存地点、保存期限、删除及安全措施以穿山甲<a href="https://www.csjplatform.com/privacy/partner" rel="noopener noreferrer" target="_blank">官方隐私政策</a>及实际服务协议为准。我们将根据实际 SDK 版本与功能配置核实相关数据流。</p>
-<p><strong>网站访问数据：</strong>由 GitHub Pages 等实际托管方依据其政策处理和保存。我们不能代表托管服务方对日志保存期限作出超出其公开规则的承诺。</p>
-<p><strong>反馈资料：</strong>对您主动通过邮件或公开反馈入口提交的信息，我们将在回复问题、故障排查、争议处理或履行法律义务所必要的期限内保留，并在适当时间依法删除、匿名化或妥善处理。</p>
-<p>我们根据实际处理活动采取合理访问控制、必要技术保护与最小化措施，降低数据被未经授权访问、披露、篡改或丢失的风险，但任何互联网服务都无法保证绝对安全。</p>
-</div>
-<div class="legal-chapter" id="chapter-4"><h3>4. 我们如何对外提供您的个人信息</h3>
-<p>我们不会以出售个人信息为目的向第三方提供您主动提交的数据。为提供《仙冢》游戏及相关网站服务，目前已确认涉及以下第三方技术或平台：</p>
-<div class="legal-note">
-<p><strong>穿山甲广告 SDK（已接入）</strong></p>
-<ul>
-<li><strong>SDK 名称：</strong>穿山甲广告 SDK</li>
-<li><strong>服务提供方：</strong>北京巨量引擎网络技术有限公司</li>
-<li><strong>主要用途：</strong>广告投放与展示、广告监测归因、投放效果统计、反作弊、服务稳定性保障；个性化广告属于取决于配置的扩展功能。</li>
-<li><strong>处理方式：</strong>SDK 在启用相关功能时可能自行采集必要的设备、网络、广告交互和诊断信息；部分数据可能用于与广告合作方的必要业务协作，以其实际政策和配置为准。</li>
-<li><strong>可能涉及的信息：</strong>设备品牌、型号、系统版本、屏幕信息、Android ID、OAID、网络状态、运营商信息及广告交互记录；GAID、应用列表、位置、Wi-Fi 网络标识、传感器等部分字段可能取决于 SDK 版本、启用的功能和授权情况。部分旧版本还可能涉及 IMEI、IMSI、MAC 等标识。请勿将这些可选字段理解为本游戏全部已采集。</li>
-<li><strong>隐私政策：</strong><a href="https://www.csjplatform.com/privacy/partner" rel="noopener noreferrer" target="_blank">https://www.csjplatform.com/privacy/partner</a></li>
-</ul>
-</div>
-<div class="legal-note">
-<p><strong>Unreal Engine（虚幻引擎，已使用）</strong></p>
-<ul>
-<li><strong>技术提供方：</strong>Epic Games</li>
-<li><strong>用途：</strong>游戏开发、引擎运行、渲染和其他底层技术功能。</li>
-<li><strong>个人信息说明：</strong>使用引擎本身并不能证明游戏自动向 Epic Games 上传终端用户的个人信息。目前未确认《仙冢》是否另外启用 Epic Online Services、Epic 账号、引擎遥测或崩溃上报相关组件；如启用，我们将根据实际处理情况补充披露。</li>
-</ul>
-</div>
-<ul>
-<li><strong>GitHub / GitHub Pages：</strong>用于公开仓库、项目页面及 GitHub Issues 反馈。参见 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer" target="_blank">GitHub 隐私声明</a>。</li>
-<li><strong>电子邮件服务：</strong>在您主动发送邮件时，相关邮件服务提供方可能按其规则处理邮件地址、正文和附件。</li>
-</ul>
-<p>除法律法规要求、履行必要服务或取得所需授权外，我们不会擅自向其他第三方提供或公开披露个人信息。其他 SDK（例如登录、支付、数据分析或崩溃上报组件）如实际接入，将另行核实并依法披露。</p>
-</div>
-<div class="legal-chapter" id="chapter-5"><h3>5. 我们如何使用 Cookies 及相关技术</h3>
-<p>Cookie 是网站可能存储在浏览器中的小型数据文件。目前《仙冢》公开的静态网站本身未实现账号登录或跨站广告跟踪脚本。浏览器、GitHub Pages 等托管平台及外部网站可能使用 Cookie、缓存和必要的安全技术，具体以其规则为准。</p>
-<p>您可通过浏览器设置清理或限制 Cookie。但<strong>网页 Cookie 与 Android 游戏内的穿山甲广告 SDK、设备标识、系统权限以及本地游戏存档不同</strong>，清除浏览器 Cookie 并不能清除游戏内广告 SDK 或存档数据。</p>
-<p>如未来网站添加登录、分析或其他会改变信息处理范围的功能，我们会相应更新本政策。</p>
-</div>
-<div class="legal-chapter" id="chapter-6"><h3>6. 我们如何保护未成年人的权益</h3>
-<p>我们重视未成年人的个人信息保护。未成年人应在监护人指导下阅读本政策，并根据适用法律要求取得监护人同意。</p>
-<p><strong>本游戏已集成穿山甲广告 SDK</strong>。我们应根据游戏适用年龄、发行区域和适用法律要求配置广告功能，针对未成年人采取必要的隐私保护和广告展示措施，并履行适用的防沉迷或其他管理义务。对于依法需要监护人同意或限制的处理行为，应采取相应措施。</p>
-<p>如监护人认为未成年人的个人信息被不当处理，可通过本政策第 9 章的联系方式与我们联系，我们将核实并依法处理。</p>
-</div>
-<div class="legal-chapter" id="chapter-7"><h3>7. 您对个人信息享有的权利</h3>
-<p>根据适用法律，您可能依法享有知情、访问、复制、更正、删除、限制或拒绝处理个人信息、撤回同意等权利。</p>
-<ul>
-<li><strong>管理本地数据：</strong>您可通过客户端实际提供的功能，或系统的清除应用数据、卸载应用等方式处理本地数据；这可能导致未备份的游戏进度无法恢复。</li>
-<li><strong>管理主动提交的信息：</strong>您可通过电子邮件向我们申请访问、更正或删除您主动提供的反馈资料。对公开发布在 GitHub Issues 的内容，修改和删除可能受 GitHub 规则限制。</li>
-<li><strong>广告数据与个性化广告：</strong>若本游戏实际开启穿山甲个性化推荐，我们将依适用法律提供相应的告知和拒绝或关闭途径，并在需要时协调 SDK 服务提供方处理您的数据请求。穿山甲相关权利请参阅其<a href="https://www.csjplatform.com/privacy/partner" rel="noopener noreferrer" target="_blank">官方隐私政策</a>。</li>
-<li><strong>撤回同意：</strong>对于以同意作为处理依据的活动，您可使用实际提供的隐私管理入口或联系开发者提出请求。撤回不会影响撤回之前依法开展的处理。</li>
-</ul>
-<p>我们将在合理期限内依法核实并处理您的请求；若需要第三方配合，会向您说明必要程序。</p>
-</div>
-<div class="legal-chapter" id="chapter-8"><h3>8. 本政策如何变更</h3>
-<p>我们可能因游戏功能更新、穿山甲 SDK 版本或配置变化、其他第三方服务调整、技术发展以及适用法律法规的要求，适时修订本隐私政策。</p>
-<p>修订后会在相关网站或游戏内以适当方式公布新版本及更新日期。对于对您权益产生重大影响的变更，我们将依照法律要求予以提示，并在必要时重新取得同意。</p>
-<p>我们将持续核对《仙冢》实际发布的安装包、已启用的穿山甲 SDK 版本及权限配置，确保数据处理披露与实际情况相符。</p>
-</div>
-<div class="legal-chapter" id="chapter-9">
-<h3>9. 如何联系我们</h3>
-<p>如果您对本政策、项目数据处理方式或个人信息权利有疑问，可通过以下方式联系：</p>
-<ul>
-<li><strong>个人信息处理者：</strong>深圳市梦新技术工作室（个人独资）</li>
-<li><strong>联系邮箱：</strong><a href="mailto:316697487@qq.com">316697487@qq.com</a></li>
-<li><strong>项目仓库：</strong><a href="https://github.com/NullLis/DreamBack" rel="noopener noreferrer" target="_blank">https://github.com/NullLis/DreamBack</a></li>
-<li><strong>问题反馈：</strong><a href="https://github.com/NullLis/DreamBack/issues" rel="noopener noreferrer" target="_blank">GitHub Issues</a>（公开页面，请勿提交敏感个人信息）</li>
-</ul>
-<p class="legal-note">个人信息访问、删除及其他私密请求建议优先通过邮件提交，不要在公开 Issue 页面披露敏感资料。</p>
-</div>
-</div>
+      <nav class="legal-toc" aria-label="隐私政策目录"><h3>目录</h3><ol><li><a href="#s1">我们处理的信息</a></li>
+<li><a href="#s2">信息处理目的与方式</a></li>
+<li><a href="#s3">第三方 SDK：穿山甲广告</a></li>
+<li><a href="#s4">权限与用户选择</a></li>
+<li><a href="#s5">信息保存与安全保护</a></li>
+<li><a href="#s6">第三方提供与外部链接</a></li>
+<li><a href="#s7">您的个人信息权利</a></li>
+<li><a href="#s8">未成年人保护</a></li>
+<li><a href="#s9">政策更新与联系我们</a></li></ol></nav>
+      <section class="legal-section" id="s1"><h3>1. 我们处理的信息</h3>
+
+<p><strong>本地游戏数据。</strong>为保存游戏进度、使用偏好或设置，游戏可在设备本地存储相应数据。仅在设备本地保存不等于这些数据被自动上传。</p>
+<p><strong>您主动提交的信息。</strong>当您通过邮件或 GitHub Issues 反馈问题时，我们可能收到您提供的邮箱地址、反馈内容、截图和其他材料，用于回复及处理请求。请勿在公开反馈页面提交身份证件、账号密码等敏感信息。</p>
+<p><strong>网站访问信息。</strong>当您访问本项目的 GitHub Pages 网站时，网站托管及网络服务提供方可能处理 IP 地址、请求时间、浏览器或设备信息等必要访问记录，用于页面交付、安全防护和故障排查。该类信息由相应服务提供方依据其规则处理。</p>
+<p><strong>广告相关信息。</strong>游戏接入的穿山甲广告 SDK 在提供广告服务时会处理下文第 3 节所列的信息。</p>
+
 </section>
-</main>
-<div id="footer-container"></div>
-<script src="../js/components.js"></script>
+<section class="legal-section" id="s2"><h3>2. 信息处理目的与方式</h3>
+
+<p>我们仅在提供游戏服务、维护正常运行、回应用户反馈和履行法定义务所需的范围内处理相应信息。涉及穿山甲的广告服务，主要用于广告加载与展示、监测归因、统计分析、反作弊以及故障诊断。</p>
+<p>广告相关信息可由穿山甲 SDK 通过集成在游戏中的技术组件处理；您主动提供的反馈信息由我们通过相应沟通渠道处理。对于需要另行授权的功能，我们将依据适用法律及您的选择开展处理。</p>
+
+</section>
+<section class="legal-section" id="s3"><h3>3. 第三方 SDK：穿山甲广告</h3>
+
+<div class="legal-info">
+<p><strong>SDK 名称：</strong>穿山甲广告 SDK</p>
+<p><strong>提供方：</strong>北京巨量引擎网络技术有限公司</p>
+<p><strong>使用场景：</strong>在游戏中加载、展示广告并提供广告监测及相关技术服务</p>
+<p><strong>处理方式：</strong>由 SDK 按其功能和配置采集或处理相关数据</p>
+<p><strong>官方政策：</strong><a href="https://www.csjplatform.com/privacy/partner" target="_blank" rel="noopener noreferrer">https://www.csjplatform.com/privacy/partner</a></p>
+</div>
+<p>依据穿山甲广告 SDK 公开的 Android 端信息类别，广告服务涉及：</p>
+<ul>
+<li><strong>设备信息：</strong>品牌、型号、系统版本、屏幕密度与分辨率、设备语言和时区、SIM 卡运营商代码、CPU、可用存储空间，以及 Android ID、OAID 等设备标识。</li>
+<li><strong>网络信息：</strong>IP 地址、运营商信息、Wi-Fi 状态与网络信号强度。</li>
+<li><strong>应用信息：</strong>应用包名、版本号、运行进程及前后台状态。</li>
+<li><strong>广告交互与性能数据：</strong>广告展示、点击、转化记录，以及崩溃、性能诊断信息。</li>
+</ul>
+<p>穿山甲公开政策还列明若干<strong>可选数据类别</strong>，例如仅适用于具备相关服务的 Android 设备的 GAID、应用列表、特定传感器信息，以及粗略或精确位置相关信息。这些项目是否处理，取决于实际集成版本、启用的广告功能、系统权限与相应授权条件，不属于所有设备的必然收集项目。</p>
+<p>在启用个性化广告推荐功能时，SDK 可能根据广告交互及设备相关信息进行个性化推荐。您可通过设备支持的广告隐私设置以及下文提供的联系方式提出管理相关信息处理的请求。</p>
+
+</section>
+<section class="legal-section" id="s4"><h3>4. 权限与用户选择</h3>
+
+<p>游戏如需调用系统权限，我们会依据相应功能用途及系统要求向您说明并请求授权。您可在设备系统设置中查看或管理应用权限。拒绝与游戏基本功能无关的可选权限，不应影响基本功能的正常使用。</p>
+<p>同意本政策不代表您已授予所有系统权限。依法以同意为依据处理个人信息时，您有权撤回同意；撤回不影响此前依据有效同意所进行处理的合法性。</p>
+
+</section>
+<section class="legal-section" id="s5"><h3>5. 信息保存与安全保护</h3>
+
+<p>游戏进度、设置等本地数据的存储通常与设备上的应用数据相关。您可通过清除应用数据或卸载应用处理此类数据，但相关操作可能导致进度丢失；系统备份功能可能影响实际保留情况。</p>
+<p>您主动提供的咨询和反馈信息，仅在处理相关事务及履行必要法定义务所需期间保存，并在不再需要时依法删除或匿名化。网站访问日志和穿山甲 SDK 所处理的数据，其存储地点及期限分别受相应服务提供方的服务和隐私规则约束。</p>
+<p>我们将根据实际处理活动采取合理的访问控制、权限管理和必要的安全保护措施，防止未经授权的访问、泄露、篡改或丢失。</p>
+
+</section>
+<section class="legal-section" id="s6"><h3>6. 第三方提供与外部链接</h3>
+
+<p>我们不会出售您的个人信息。为实现广告功能，穿山甲广告 SDK 按本政策第 3 节及其官方隐私政策处理相关数据；在法律要求单独同意的情况下，我们将依法履行相应告知和同意程序。</p>
+<p>本项目网站由 GitHub Pages 提供托管。您点击外部链接、访问 GitHub 仓库或在 GitHub Issues 留言时，相关信息可能由 GitHub 根据其<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">隐私声明</a>处理。网络访问可能涉及境外服务设施。</p>
+<p>除法律规定或者依法完成必要程序的情况外，我们不会擅自向其他独立第三方提供或公开披露您的个人信息。</p>
+
+</section>
+<section class="legal-section" id="s7"><h3>7. 您的个人信息权利</h3>
+
+<p>在适用法律规定的范围内，您可以请求了解、查阅、复制、更正或删除我们处理的个人信息，并可要求解释处理规则、撤回基于同意的授权。</p>
+<p>您可以通过设备的应用权限设置管理系统授权；如需处理您提交的反馈资料，或提出与穿山甲广告数据有关的请求，可发送邮件至<a href="mailto:316697487@qq.com">316697487@qq.com</a>。我们会核实您的请求，在法律规定的期限内答复；涉及第三方独立处理的数据时，我们会提供必要的联系协助或处理指引。</p>
+<p>为保护您的数据安全，我们可能在处理请求前采取合理措施核实申请人与相关信息的关系。</p>
+
+</section>
+<section class="legal-section" id="s8"><h3>8. 未成年人保护</h3>
+
+<p>我们重视未成年人的个人信息保护。未成年人应当在监护人指导下使用本游戏，并遵守适用的未成年人网络保护要求。</p>
+<p>处理不满十四周岁未成年人的个人信息时，我们将依法取得其父母或其他监护人的同意并采取适当保护措施。监护人如需查询、删除相关信息，可通过第 9 节的联系方式提出请求。</p>
+
+</section>
+<section class="legal-section" id="s9"><h3>9. 政策更新与联系我们</h3>
+
+<p>如游戏功能、第三方服务或个人信息处理方式发生变化，我们会及时更新本政策，并在页面标明更新日期；涉及依法应重新取得同意的变化时，我们会履行相应程序。</p>
+<p><strong>个人信息处理者：</strong>深圳市梦新技术工作室（个人独资）</p>
+<p><strong>联系邮箱：</strong><a href="mailto:316697487@qq.com">316697487@qq.com</a></p>
+<p><strong>项目网站：</strong><a href="https://nulllis.github.io/DreamBack/">https://nulllis.github.io/DreamBack/</a></p>
+<p><strong>一般反馈：</strong><a href="https://github.com/NullLis/DreamBack/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a>（请勿在公开页面披露敏感信息）</p>
+
+</section>
+      <div class="legal-sign"><p><strong>DreamBack《仙冢》</strong></p><p>深圳市梦新技术工作室（个人独资）</p></div>
+    </div>
+  </main>
+  <div id="footer-container"></div>
+  <script src="../js/components.js"></script>
 </body>
 </html>
