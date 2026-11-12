@@ -29,10 +29,10 @@
         if (footer) footer.innerHTML = `
             <footer class="footer">
                 <div class="footer-links">
-                    <a href="https://github.com/NullLis/DreamBack">项目仓库</a>
-                    <a href="https://github.com/NullLis/DreamBack/issues">问题反馈</a>
+                    <a href="${basePath}html/agreement.html">服务协议</a>
+                    <a href="${basePath}html/privacy.html">隐私政策</a>
                 </div>
-                DreamBack · 仙冢 &nbsp;|&nbsp; © 2026 NullLis
+                DreamBack · 仙冢 &nbsp;|&nbsp; © 2026
             </footer>`;
     });
     function initNavbar() {
