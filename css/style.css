@@ -239,3 +239,6 @@ code {
     .table-wrapper th,
     .table-wrapper td { padding: 0.8rem 0.65rem; font-size: 0.9rem; }
 }
+.table-wrapper tbody td {
+    vertical-align: middle;
+}
