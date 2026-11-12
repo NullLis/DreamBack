@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="仙冢 DreamBack 更新日志及项目开发记录。">
+    <meta name="description" content="仙冢 DreamBack 更新日志及版本记录。">
     <title>更新日志 — DreamBack 仙冢</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -13,7 +14,7 @@
     <main class="container">
         <header>
             <h1>📅 更新日志</h1>
-            <p class="subtitle">关注《仙冢》的发布信息与项目记录</p>
+            <p class="subtitle">关注《仙冢》的版本更新信息</p>
         </header>
 
         <section>
@@ -28,89 +29,120 @@
                         </tr>
                     </thead>
                     <tbody id="changelogBody" aria-live="polite">
-                        <tr><td colspan="3" class="log-status">正在加载更新日志…</td></tr>
+                        <tr>
+                            <td colspan="3" class="log-status">
+                                正在加载更新日志…
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
-            </div>
-        </section>
-
-        <section>
-            <h2>🔗 查看开发记录</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <strong>📦 代码提交</strong>
-                    <p>查看项目仓库中的提交记录。</p>
-                    <a href="https://github.com/NullLis/DreamBack/commits/main/">GitHub Commits</a>
-                </div>
-                <div class="card">
-                    <strong>🏷️ 版本发布</strong>
-                    <p>查看仓库发布页中的已公开版本。</p>
-                    <a href="https://github.com/NullLis/DreamBack/releases">GitHub Releases</a>
-                </div>
             </div>
         </section>
     </main>
 
     <div id="footer-container"></div>
+
     <script src="../js/components.js"></script>
     <script>
-        // 从仓库根目录加载 update.json；GitHub Pages /DreamBack/html/ 路径下同样适用。
+        // 从仓库根目录自动加载 update.json
         (async function loadUpdateLog() {
             const tbody = document.getElementById('changelogBody');
 
             function showStatus(message) {
                 const row = document.createElement('tr');
                 const cell = document.createElement('td');
+
                 cell.colSpan = 3;
                 cell.className = 'log-status';
                 cell.textContent = message;
+
                 row.appendChild(cell);
                 tbody.replaceChildren(row);
             }
 
             try {
                 if (window.location.protocol === 'file:') {
-                    throw new Error('请通过 GitHub Pages 或本地 HTTP 服务器访问，不能直接双击 HTML 文件。');
+                    throw new Error(
+                        '请通过 GitHub Pages 或本地 HTTP 服务器访问，不能直接双击 HTML 文件。'
+                    );
                 }
 
-                const jsonUrl = new URL('../update.json', window.location.href);
-                // 绕过旧缓存，确保更新 JSON 后能尽快看到新内容。
-                jsonUrl.searchParams.set('_', Date.now().toString());
-                const response = await fetch(jsonUrl, { cache: 'no-store' });
+                const jsonUrl = new URL(
+                    '../update.json',
+                    window.location.href
+                );
+
+                // 防止浏览器使用旧缓存
+                jsonUrl.searchParams.set(
+                    '_',
+                    Date.now().toString()
+                );
+
+                const response = await fetch(jsonUrl, {
+                    cache: 'no-store'
+                });
+
                 if (!response.ok) {
-                    throw new Error('读取 update.json 失败（HTTP ' + response.status + '）');
+                    throw new Error(
+                        '读取 update.json 失败（HTTP ' +
+                        response.status + '）'
+                    );
                 }
 
                 const changelog = await response.json();
+
                 if (!Array.isArray(changelog)) {
-                    throw new Error('update.json 顶层必须是一个数组。');
+                    throw new Error(
+                        'update.json 顶层必须是一个数组。'
+                    );
                 }
+
                 if (changelog.length === 0) {
                     showStatus('暂无更新记录');
                     return;
                 }
 
                 const fragment = document.createDocumentFragment();
+
                 for (const entry of changelog) {
-                    if (!entry || typeof entry !== 'object' || Array.isArray(entry)) continue;
+                    if (
+                        !entry ||
+                        typeof entry !== 'object' ||
+                        Array.isArray(entry)
+                    ) {
+                        continue;
+                    }
 
                     const row = document.createElement('tr');
                     const version = document.createElement('td');
                     const date = document.createElement('td');
                     const content = document.createElement('td');
+
                     content.className = 'log-content';
 
-                    version.textContent = String(entry['版本'] ?? '未知');
-                    date.textContent = String(entry['日期'] ?? '未知');
+                    version.textContent = String(
+                        entry['版本'] ?? '未知'
+                    );
 
-                    // 同时兼容 "内容": ["修复A", "修复B"] 和 "内容": "修复A\n修复B"。
+                    date.textContent = String(
+                        entry['日期'] ?? '未知'
+                    );
+
+                    // 支持数组和字符串两种更新内容格式
                     let lines = [];
+
                     if (Array.isArray(entry['内容'])) {
-                        lines = entry['内容'].map(item => String(item));
+                        lines = entry['内容'].map(
+                            item => String(item)
+                        );
                     } else if (entry['内容'] != null) {
-                        lines = String(entry['内容']).split(/\r?\n/);
+                        lines = String(entry['内容'])
+                            .split(/\r?\n/);
                     }
-                    content.textContent = lines.length ? lines.join('\n') : '暂无说明';
+
+                    content.textContent = lines.length
+                        ? lines.join('\n')
+                        : '暂无说明';
 
                     row.append(version, date, content);
                     fragment.appendChild(row);
@@ -121,9 +153,16 @@
                 } else {
                     tbody.replaceChildren(fragment);
                 }
+
             } catch (error) {
-                console.error('仙冢更新日志加载失败：', error);
-                showStatus('更新日志加载失败：' + error.message);
+                console.error(
+                    '仙冢更新日志加载失败：',
+                    error
+                );
+
+                showStatus(
+                    '更新日志加载失败：' + error.message
+                );
             }
         })();
     </script>
